@@ -20,6 +20,7 @@ namespace CSharpExercise
             Console.WriteLine("You entered {0}", radius);
             Console.WriteLine("Area of Circle is {0}", areaOfCircle(radius));
             Console.WriteLine("Circumference of Circle is {0}", circumferenceOfCircle(radius));
+            Console.WriteLine("Volume of Hemisphere is {0}", volumeOfHemisphere(radius));
         }
 
         public static double areaOfCircle(double r)
@@ -34,5 +35,10 @@ namespace CSharpExercise
             return Cir;
         }
 
+        public static double volumeOfHemisphere(double r)
+        {
+            double Vol = ((4.0 / 3.0) * Math.PI * Math.Pow(r,3)) / 2.0;
+            return Vol;
+        }
     }
 }
