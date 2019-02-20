@@ -55,7 +55,7 @@ namespace CSharpExercise
                             else { Console.WriteLine("Please enter a valid number."); }
                             break;
                         case 4://Area of a triangle given length of three sides
-                            Console.WriteLine("calculates the area of a triangle given the length of the three sides.");
+                            Console.WriteLine("calculates the area of a triangle given integer lengths of the three sides.");
                             Console.Write("Enter side length 1: ");
                             if (!Int32.TryParse(Console.ReadLine(), out int a) || a < 0) break;//don't take negative value
                             Console.Write("Enter side length 2: ");
@@ -65,10 +65,43 @@ namespace CSharpExercise
                             Console.WriteLine("Area of Triangle is {0}", MathFunctionsClass.areaOfTriangle(a, b, c));
                             loopContinue = false;
                             break;
-                        case 5:
+                        case 5://Solving a quadratic equation
+                            Console.WriteLine("Solve ax^2+bx+c=0 given integer coeffients a, b, c.");
+                            Console.Write("Enter a: ");
+                            if (!Int32.TryParse(Console.ReadLine(), out int aa)) break; //validate input as integer
+                            else if (aa == 0)
+                            {
+                                Console.WriteLine("You entered a=0. Equation will be solved as linear equation.");
+                            };
+                            Console.Write("Enter b: ");
+                            if (!Int32.TryParse(Console.ReadLine(), out int bb)) break;
+                            Console.Write("Enter c: ");
+                            if (!Int32.TryParse(Console.ReadLine(), out int cc)) break;
+                            if (aa !=0)   //solve the quadratic equation only if a!=0
+                            {
+                                var solution = MathFunctionsClass.quadraticEqn(aa, bb, cc);
+                                Console.WriteLine("Solutions are {0},{1}", solution.Item1, solution.Item2);
+                            }
+                            else if (bb != 0) //Equation will be solved as linear equation and have one root if b!=0
+                            {
+                                double root = -1.0 * cc / bb;
+                                Console.WriteLine($"Solution is {root}");
+                                loopContinue = false;
+                                break;
+                            }
+                            else if (cc != 0)
+                            {
+                                Console.WriteLine("Non-zero c=0. Solution does not exist.");
+                            }
+                            else
+                            {
+                                Console.WriteLine("a=b=c=0. x can be any number.");
+                            }
+                       
+                            
+
                             loopContinue = false;
                             break;
-
                         // not really needed, if you remove the default
                         // then your loop will not exit and you can start again
                         default:
