@@ -20,8 +20,15 @@ namespace CSharpExercise
                 {
                     switch (choice)
                     {
-                        case 1:
-                            loopContinue = false;
+                        case 1://Circumference of Circle
+                            Console.Write("Enter radius： ");
+                            if (double.TryParse(Console.ReadLine(), out double r))
+                            {
+                                Console.WriteLine("You entered {0}", r);
+                                Console.WriteLine("Circumference of Circle is {0:F3}", circumferenceOfCircle(r));
+                                loopContinue = false;
+                            }
+                            else { Console.WriteLine("Please enter a valid number."); }
                             break;
                         case 2:
                             loopContinue = false;
@@ -64,7 +71,7 @@ namespace CSharpExercise
             radius = Convert.ToDouble(userInput);
             Console.WriteLine("You entered {0}", radius);
             Console.WriteLine("Area of Circle is {0}", areaOfCircle(radius));
-            Console.WriteLine("Circumference of Circle is {0}", circumferenceOfCircle(radius));
+            Console.WriteLine("Circumference of Circle is {0:F4}", circumferenceOfCircle(radius));
             Console.WriteLine("Volume of Hemisphere is {0}", volumeOfHemisphere(radius));
             Console.WriteLine("Area of Triangle is {0}", areaOfTriangle(3,4,5));
             var solution = quadraticEqn(1, 3, 1);
@@ -74,9 +81,9 @@ namespace CSharpExercise
         static void DisplayMenu()
         {
             Console.WriteLine("Mathematical Formulas");
-            Console.WriteLine("Make a selection 1-5");
-            Console.WriteLine("1. Area of Circle");
-            Console.WriteLine("2. Circumference of Circle");
+            Console.WriteLine("Make a selection 1-5 and hit enter");
+            Console.WriteLine("1. Circumference of Circle");
+            Console.WriteLine("2. Area of Circle");
             Console.WriteLine("3. Volume of a hemisphere");
             Console.WriteLine("4. Area of triangle given the length of the sides");
             Console.WriteLine("5. Solving a quadratic equation");
