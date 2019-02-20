@@ -14,6 +14,7 @@ namespace CSharpExercise
             do
             {
                 userChoice = DisplayMenu();
+                Console.WriteLine("You entered {0}", userChoice);
             } while (userChoice < 1 || userChoice > 5);
 
 
@@ -36,14 +37,13 @@ namespace CSharpExercise
         public static int DisplayMenu()
         {
             Console.WriteLine("Mathematical Formulas");
-            Console.WriteLine();
+            Console.WriteLine("Make a selection 1-5");
             Console.WriteLine("1. Area of Circle");
             Console.WriteLine("2. Circumference of Circle");
             Console.WriteLine("3. Volume of a hemisphere");
             Console.WriteLine("4. Area of triangle given the length of the sides");
             Console.WriteLine("5. Solving a quadratic equation");
             var result = int.Parse(Console.ReadLine());
-            Console.WriteLine("You entered {0}", result);
             return Convert.ToInt32(result);
         }
 
