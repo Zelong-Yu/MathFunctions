@@ -58,7 +58,6 @@ namespace MathFunctions
             {
                 Console.WriteLine("Discriminant is negative.");
                 throw new ArithmeticException("No Real Solution since Discriminant<0");
-                //return new Tuple<double, double>(null,null);
             }
         }
 
