@@ -79,8 +79,15 @@ namespace CSharpExercise
                             if (!Int32.TryParse(Console.ReadLine(), out int cc)) break;
                             if (aa !=0)   //solve the quadratic equation only if a!=0
                             {
-                                var solution = MathFunctionsClass.quadraticEqn(aa, bb, cc);
-                                Console.WriteLine("Solutions are {0},{1}", solution.Item1, solution.Item2);
+                                try
+                                {
+                                    var solution = MathFunctionsClass.quadraticEqn(aa, bb, cc);
+                                    Console.WriteLine("Solutions are {0},{1}", solution.Item1, solution.Item2);
+                                }
+                                catch(ArithmeticException e)
+                                {
+                                    Console.WriteLine("No Real Solution");
+                                }
                             }
                             else if (bb != 0) //Equation will be solved as linear equation and have one root if b!=0
                             {
