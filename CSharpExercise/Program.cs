@@ -22,7 +22,7 @@ namespace CSharpExercise
                     {
                         case 1://Circumference of Circle
                             Console.Write("Enter radius： ");
-                            if (double.TryParse(Console.ReadLine(), out double r))
+                            if (double.TryParse(Console.ReadLine(), out double r) && r>0)//r need to be greater than 0
                             {
                                 Console.WriteLine("You entered {0}", r);
                                 Console.WriteLine("Circumference of Circle is {0:F3}", circumferenceOfCircle(r));
@@ -31,10 +31,24 @@ namespace CSharpExercise
                             else { Console.WriteLine("Please enter a valid number."); }
                             break;
                         case 2:
-                            loopContinue = false;
+                            Console.Write("Enter radius： ");
+                            if (double.TryParse(Console.ReadLine(), out double rr) && rr>0)//r need to be greater than 0
+                            {
+                                Console.WriteLine("You entered {0}", rr);
+                                Console.WriteLine("Area of Circle is {0:F3}", areaOfCircle(rr));
+                                loopContinue = false;
+                            }
+                            else { Console.WriteLine("Please enter a valid number."); }
                             break;
                         case 3:
-                            loopContinue = false;
+                            Console.Write("Enter radius： ");
+                            if (double.TryParse(Console.ReadLine(), out double rrr) && rrr>=0)//r need to be non-negative
+                            {
+                                Console.WriteLine("You entered {0}", rrr);
+                                Console.WriteLine("Volume of Hemisphere is {0:F3}", volumeOfHemisphere(rrr)); ;
+                                loopContinue = false;
+                            }
+                            else { Console.WriteLine("Please enter a valid number."); }
                             break;
                         case 4:
                             loopContinue = false;
@@ -50,7 +64,7 @@ namespace CSharpExercise
                             break;
                     }
                     if (loopContinue)
-                        Console.WriteLine("Please enter a valid choice.");
+                        Console.WriteLine("Please enter a valid input.");
                 }
             }
 
