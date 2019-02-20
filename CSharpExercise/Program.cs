@@ -10,6 +10,13 @@ namespace CSharpExercise
     {
         static void Main(string[] args)
         {
+            int userChoice = 0;
+            do
+            {
+                userChoice = DisplayMenu();
+            } while (userChoice < 1 || userChoice > 5);
+
+
             string userInput;
             double radius;
 
@@ -22,8 +29,22 @@ namespace CSharpExercise
             Console.WriteLine("Circumference of Circle is {0}", circumferenceOfCircle(radius));
             Console.WriteLine("Volume of Hemisphere is {0}", volumeOfHemisphere(radius));
             Console.WriteLine("Area of Triangle is {0}", areaOfTriangle(3,4,5));
-            var solution = quadraticEqn(1, 2, 1);
-            Console.WriteLine("Solutions are {0}", solution.Item1, solution.Item2);
+            var solution = quadraticEqn(1, 3, 1);
+            Console.WriteLine("Solutions are {0},{1}", solution.Item1, solution.Item2);
+        }
+
+        public static int DisplayMenu()
+        {
+            Console.WriteLine("Mathematical Formulas");
+            Console.WriteLine();
+            Console.WriteLine("1. Area of Circle");
+            Console.WriteLine("2. Circumference of Circle");
+            Console.WriteLine("3. Volume of a hemisphere");
+            Console.WriteLine("4. Area of triangle given the length of the sides");
+            Console.WriteLine("5. Solving a quadratic equation");
+            var result = int.Parse(Console.ReadLine());
+            Console.WriteLine("You entered {0}", result);
+            return Convert.ToInt32(result);
         }
 
         public static double areaOfCircle(double r)
