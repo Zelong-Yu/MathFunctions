@@ -34,7 +34,7 @@ namespace CSharpExercise
                             }
                             else { Console.WriteLine("Please enter a valid number."); }
                             break;
-                        case 2:
+                        case 2://Area of Circle
                             Console.Write("Enter radius： ");
                             if (double.TryParse(Console.ReadLine(), out double rr) && rr>0)//r need to be greater than 0
                             {
@@ -44,7 +44,7 @@ namespace CSharpExercise
                             }
                             else { Console.WriteLine("Please enter a valid number."); }
                             break;
-                        case 3:
+                        case 3://Volume of Hemisphere
                             Console.Write("Enter radius： ");
                             if (double.TryParse(Console.ReadLine(), out double rrr) && rrr>=0)//r need to be non-negative
                             {
@@ -54,7 +54,15 @@ namespace CSharpExercise
                             }
                             else { Console.WriteLine("Please enter a valid number."); }
                             break;
-                        case 4:
+                        case 4://Area of a triangle given length of three sides
+                            Console.WriteLine("calculates the area of a triangle given the length of the three sides.");
+                            Console.Write("Enter side length 1: ");
+                            if (!Int32.TryParse(Console.ReadLine(), out int a) || a < 0) break;//don't take negative value
+                            Console.Write("Enter side length 2: ");
+                            if (!Int32.TryParse(Console.ReadLine(), out int b) || b < 0) break;
+                            Console.Write("Enter side length 3: ");
+                            if (!Int32.TryParse(Console.ReadLine(), out int c) || c < 0) break;
+                            Console.WriteLine("Area of Triangle is {0}", MathFunctionsClass.areaOfTriangle(a, b, c));
                             loopContinue = false;
                             break;
                         case 5:
@@ -69,6 +77,7 @@ namespace CSharpExercise
                     }
                     if (loopContinue)
                         Console.WriteLine("Please enter a valid input.");
+                        Console.WriteLine();
                 }
             }
 
