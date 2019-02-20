@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MathFunctions;
 
 namespace CSharpExercise
 {
@@ -10,6 +11,9 @@ namespace CSharpExercise
     {
         static void Main(string[] args)
         {
+            Console.WriteLine($"The value of 2pi squared is: {MathFunctionsClass.Square(2 * Math.PI):F3}");
+            Console.WriteLine($"The value of pi cubed is: {MathFunctionsClass.Cube( Math.PI):F3}");
+
             bool loopContinue = true;
             while (loopContinue)
             {
@@ -25,7 +29,7 @@ namespace CSharpExercise
                             if (double.TryParse(Console.ReadLine(), out double r) && r>0)//r need to be greater than 0
                             {
                                 Console.WriteLine("You entered {0}", r);
-                                Console.WriteLine("Circumference of Circle is {0:F3}", circumferenceOfCircle(r));
+                                Console.WriteLine("Circumference of Circle is {0:F3}", MathFunctionsClass.circumferenceOfCircle(r));
                                 loopContinue = false;
                             }
                             else { Console.WriteLine("Please enter a valid number."); }
@@ -35,7 +39,7 @@ namespace CSharpExercise
                             if (double.TryParse(Console.ReadLine(), out double rr) && rr>0)//r need to be greater than 0
                             {
                                 Console.WriteLine("You entered {0}", rr);
-                                Console.WriteLine("Area of Circle is {0:F3}", areaOfCircle(rr));
+                                Console.WriteLine("Area of Circle is {0:F3}", MathFunctionsClass.areaOfCircle(rr));
                                 loopContinue = false;
                             }
                             else { Console.WriteLine("Please enter a valid number."); }
@@ -45,7 +49,7 @@ namespace CSharpExercise
                             if (double.TryParse(Console.ReadLine(), out double rrr) && rrr>=0)//r need to be non-negative
                             {
                                 Console.WriteLine("You entered {0}", rrr);
-                                Console.WriteLine("Volume of Hemisphere is {0:F3}", volumeOfHemisphere(rrr)); ;
+                                Console.WriteLine("Volume of Hemisphere is {0:F3}", MathFunctionsClass.volumeOfHemisphere(rrr)); ;
                                 loopContinue = false;
                             }
                             else { Console.WriteLine("Please enter a valid number."); }
@@ -76,12 +80,12 @@ namespace CSharpExercise
             } while (userChoice < 1 || userChoice > 5);*/
 
 
-            string userInput;
+            /*string userInput;
             double radius;
 
             Console.Write("Enter radius：");
             userInput = Console.ReadLine();
-            /* Converts to double type */
+            // Converts to double type 
             radius = Convert.ToDouble(userInput);
             Console.WriteLine("You entered {0}", radius);
             Console.WriteLine("Area of Circle is {0}", areaOfCircle(radius));
@@ -89,7 +93,7 @@ namespace CSharpExercise
             Console.WriteLine("Volume of Hemisphere is {0}", volumeOfHemisphere(radius));
             Console.WriteLine("Area of Triangle is {0}", areaOfTriangle(3,4,5));
             var solution = quadraticEqn(1, 3, 1);
-            Console.WriteLine("Solutions are {0},{1}", solution.Item1, solution.Item2);
+            Console.WriteLine("Solutions are {0},{1}", solution.Item1, solution.Item2);*/
         }
 
         static void DisplayMenu()
@@ -105,7 +109,7 @@ namespace CSharpExercise
             //return Convert.ToInt32(result);
         }
 
-        public static double areaOfCircle(double r)
+        /*public static double areaOfCircle(double r)
         {
             double Area = Math.PI * Math.Pow(r, 2);
             return Area;
@@ -145,6 +149,6 @@ namespace CSharpExercise
                 Console.WriteLine("No Real Solution.");
                 return new Tuple<double, double>(0.0, 0.0);
             }
-        }
+        }*/
     }
 }

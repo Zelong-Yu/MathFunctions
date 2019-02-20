@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.28606.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpExercise", "CSharpExercise\CSharpExercise.csproj", "{7E6F7A0A-41E0-43EE-9BC4-EDCE1B346740}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{FFFCC44B-B594-4726-9010-1DBB8EA33F44}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathFunctions", "MathFunctions\MathFunctions.csproj", "{8C8539DA-16AB-4E81-AEB0-2FB5643981D6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathFunctionsTests", "MathFunctionsTests\MathFunctionsTests.csproj", "{F01732D5-5126-4030-B0DA-6D3490CB6478}"
@@ -23,10 +21,6 @@ Global
 		{7E6F7A0A-41E0-43EE-9BC4-EDCE1B346740}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E6F7A0A-41E0-43EE-9BC4-EDCE1B346740}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E6F7A0A-41E0-43EE-9BC4-EDCE1B346740}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FFFCC44B-B594-4726-9010-1DBB8EA33F44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FFFCC44B-B594-4726-9010-1DBB8EA33F44}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FFFCC44B-B594-4726-9010-1DBB8EA33F44}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FFFCC44B-B594-4726-9010-1DBB8EA33F44}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8C8539DA-16AB-4E81-AEB0-2FB5643981D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8C8539DA-16AB-4E81-AEB0-2FB5643981D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C8539DA-16AB-4E81-AEB0-2FB5643981D6}.Release|Any CPU.ActiveCfg = Release|Any CPU

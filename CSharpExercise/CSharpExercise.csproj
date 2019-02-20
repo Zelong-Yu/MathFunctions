@@ -51,5 +51,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MathFunctions\MathFunctions.csproj">
+      <Project>{8c8539da-16ab-4e81-aeb0-2fb5643981d6}</Project>
+      <Name>MathFunctions</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
