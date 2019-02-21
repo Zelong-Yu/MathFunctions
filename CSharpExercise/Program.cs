@@ -15,7 +15,6 @@ namespace CSharpExercise
             bool loopContinue = true;
             while (loopContinue)
             {
-                Console.Clear();
                 DisplayMenu();//Display selection menu
                 // Use TryParse when reading the user input. This will avoid an 
                 // Exception if the user types a letter for example.
@@ -136,7 +135,7 @@ namespace CSharpExercise
 
         static void DisplayMenu()
         {
-            Console.WriteLine();
+            Console.Clear();
             Console.WriteLine("Mathematical Formulas");
             Console.WriteLine("Make a selection 1-5 and hit enter. Invalid input will bring you back to main menu.");
             Console.WriteLine("1. Circumference of Circle");
