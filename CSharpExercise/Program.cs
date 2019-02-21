@@ -116,8 +116,7 @@ namespace CSharpExercise
                             loopContinue = false;
                             Console.WriteLine("Hit any key to exit.");
                             break;
-                        // not really needed, if you remove the default
-                        // then your loop will not exit and you can start again
+                        // Any other integer selection, asked to put in valid input
                         default:
                             loopContinue = true;
                             Console.WriteLine("Please enter a valid input. ");
@@ -125,8 +124,7 @@ namespace CSharpExercise
                     }
                     if (loopContinue)
                     {
-                       // Console.WriteLine("Please enter a valid input.);
-                       // Console.ReadKey();
+                      
                      }
                     
                 }

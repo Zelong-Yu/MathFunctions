@@ -15,7 +15,7 @@ namespace MathFunctions.Tests
         //MathFunctionsClass objectUnderTest = new MathFunctionsClass(); //declare and instantiaze MathFunctionsClass
 
         [TestMethod()]
-        public void SquareTest()
+        public void AreaCirVolTest()
         {
             Assert.AreEqual(9 * Math.PI, MathFunctionsClass.areaOfCircle(3));
             Assert.AreEqual(6 * Math.PI, MathFunctionsClass.circumferenceOfCircle(3));
@@ -27,9 +27,9 @@ namespace MathFunctions.Tests
         }
 
         [TestMethod()]
-        public void CubeTest()
+        public void TriangleTest()
         {
-            Assert.AreEqual(8, MathFunctionsClass.Cube(2));
+            Assert.AreEqual(6, MathFunctionsClass.areaOfTriangle(3,4,5));
             /* MathFunctionsClass.Cube(2)
                            .ShouldBe(8);
             MathFunctionsClass.Cube(-2)
