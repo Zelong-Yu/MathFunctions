@@ -11,8 +11,6 @@ namespace CSharpExercise
     {
         static void Main(string[] args)
         {
-            Console.WriteLine($"The value of 2pi squared is: {MathFunctionsClass.Square(2 * Math.PI):F3}");
-            Console.WriteLine($"The value of pi cubed is: {MathFunctionsClass.Cube( Math.PI):F3}");
 
             bool loopContinue = true;
             while (loopContinue)
@@ -30,7 +28,7 @@ namespace CSharpExercise
                             {
                                 Console.WriteLine("You entered {0}", r);
                                 Console.WriteLine("Circumference of Circle is {0:F3}", MathFunctionsClass.circumferenceOfCircle(r));
-                                loopContinue = false;
+                              //  loopContinue = false;
                             }
                             else { Console.WriteLine("Please enter a valid number."); }
                             break;
@@ -40,7 +38,7 @@ namespace CSharpExercise
                             {
                                 Console.WriteLine("You entered {0}", rr);
                                 Console.WriteLine("Area of Circle is {0:F3}", MathFunctionsClass.areaOfCircle(rr));
-                                loopContinue = false;
+                              //  loopContinue = false;
                             }
                             else { Console.WriteLine("Please enter a valid number."); }
                             break;
@@ -50,7 +48,7 @@ namespace CSharpExercise
                             {
                                 Console.WriteLine("You entered {0}", rrr);
                                 Console.WriteLine("Volume of Hemisphere is {0:F3}", MathFunctionsClass.volumeOfHemisphere(rrr)); ;
-                                loopContinue = false;
+                               // loopContinue = false;
                             }
                             else { Console.WriteLine("Please enter a valid number."); }
                             break;
@@ -63,7 +61,7 @@ namespace CSharpExercise
                             Console.Write("Enter side length 3: ");
                             if (!Int32.TryParse(Console.ReadLine(), out int c) || c < 0) break;
                             Console.WriteLine("Area of Triangle is {0}", MathFunctionsClass.areaOfTriangle(a, b, c));
-                            loopContinue = false;
+                          //  loopContinue = false;
                             break;
                         case 5://Solving a quadratic equation
                             Console.WriteLine("Solve ax^2+bx+c=0 given integer coeffients a, b, c.");
@@ -93,7 +91,7 @@ namespace CSharpExercise
                             {
                                 double root = -1.0 * cc / bb;
                                 Console.WriteLine($"Solution is {root}");
-                                loopContinue = false;
+                               // loopContinue = false;
                                 break;
                             }
                             else if (cc != 0)
@@ -107,6 +105,9 @@ namespace CSharpExercise
                        
                             
 
+                            //loopContinue = false;
+                            break;
+                        case 0:
                             loopContinue = false;
                             break;
                         // not really needed, if you remove the default
@@ -116,7 +117,7 @@ namespace CSharpExercise
                             break;
                     }
                     if (loopContinue)
-                        Console.WriteLine("Please enter a valid input.");
+                        //Console.WriteLine("Please enter a valid input.");
                         Console.WriteLine();
                 }
             }
@@ -125,6 +126,7 @@ namespace CSharpExercise
 
         static void DisplayMenu()
         {
+            Console.WriteLine();
             Console.WriteLine("Mathematical Formulas");
             Console.WriteLine("Make a selection 1-5 and hit enter");
             Console.WriteLine("1. Circumference of Circle");
@@ -132,6 +134,7 @@ namespace CSharpExercise
             Console.WriteLine("3. Volume of a hemisphere");
             Console.WriteLine("4. Area of triangle given the length of the sides");
             Console.WriteLine("5. Solving a quadratic equation");
+            Console.WriteLine("0. Quit");
         }
     }
 }

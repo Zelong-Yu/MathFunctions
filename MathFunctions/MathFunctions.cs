@@ -44,14 +44,14 @@ namespace MathFunctions
             return Area;
         }
 
-        public static Tuple<double, double> quadraticEqn(int a, int b, int c)
+        public static (double, double) quadraticEqn(int a, int b, int c)
         {
             double Delta = b * b - 4 * a * c;
             if (Delta >= 0)
             {
                 double x1 = (-b + Math.Sqrt(Delta)) / (2 * a);
                 double x2 = (-b - Math.Sqrt(Delta)) / (2 * a);
-                var tuple = new Tuple<double, double>(x1, x2);
+                var tuple = (x1, x2);
                 return tuple;
             }
             else
