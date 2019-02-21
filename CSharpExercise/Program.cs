@@ -15,11 +15,13 @@ namespace CSharpExercise
             bool loopContinue = true;
             while (loopContinue)
             {
+                Console.Clear();
                 DisplayMenu();//Display selection menu
                 // Use TryParse when reading the user input. This will avoid an 
                 // Exception if the user types a letter for example.
                 if (Int32.TryParse(Console.ReadLine(), out int choice))
                 {
+                   
                     switch (choice)
                     {
                         case 1://Circumference of Circle
@@ -31,6 +33,7 @@ namespace CSharpExercise
                               //  loopContinue = false;
                             }
                             else { Console.WriteLine("Please enter a valid number."); }
+                            
                             break;
                         case 2://Area of Circle
                             Console.Write("Enter radius： ");
@@ -41,6 +44,7 @@ namespace CSharpExercise
                               //  loopContinue = false;
                             }
                             else { Console.WriteLine("Please enter a valid number."); }
+                            
                             break;
                         case 3://Volume of Hemisphere
                             Console.Write("Enter radius： ");
@@ -51,6 +55,7 @@ namespace CSharpExercise
                                // loopContinue = false;
                             }
                             else { Console.WriteLine("Please enter a valid number."); }
+                            
                             break;
                         case 4://Area of a triangle given length of three sides
                             Console.WriteLine("calculates the area of a triangle given integer lengths of the three sides.");
@@ -61,7 +66,8 @@ namespace CSharpExercise
                             Console.Write("Enter side length 3: ");
                             if (!Int32.TryParse(Console.ReadLine(), out int c) || c < 0) break;
                             Console.WriteLine("Area of Triangle is {0}", MathFunctionsClass.areaOfTriangle(a, b, c));
-                          //  loopContinue = false;
+                            //  loopContinue = false;
+                            
                             break;
                         case 5://Solving a quadratic equation
                             Console.WriteLine("Solve ax^2+bx+c=0 given integer coeffients a, b, c.");
@@ -102,24 +108,30 @@ namespace CSharpExercise
                             {
                                 Console.WriteLine("a=b=c=0. x can be any number.");
                             }
-                       
                             
 
                             //loopContinue = false;
                             break;
                         case 0:
                             loopContinue = false;
+                            Console.WriteLine("Hit any key to exit.");
                             break;
                         // not really needed, if you remove the default
                         // then your loop will not exit and you can start again
                         default:
                             loopContinue = true;
+                            Console.WriteLine("Please enter a valid input. ");
                             break;
                     }
                     if (loopContinue)
-                        //Console.WriteLine("Please enter a valid input.");
-                        Console.WriteLine();
+                    {
+                       // Console.WriteLine("Please enter a valid input.);
+                       // Console.ReadKey();
+                     }
+                    
                 }
+                Console.WriteLine("Hit any key to continue.");
+                Console.ReadKey();
             }
 
         }
@@ -128,7 +140,7 @@ namespace CSharpExercise
         {
             Console.WriteLine();
             Console.WriteLine("Mathematical Formulas");
-            Console.WriteLine("Make a selection 1-5 and hit enter");
+            Console.WriteLine("Make a selection 1-5 and hit enter. Invalid input will bring you back to main menu.");
             Console.WriteLine("1. Circumference of Circle");
             Console.WriteLine("2. Area of Circle");
             Console.WriteLine("3. Volume of a hemisphere");
