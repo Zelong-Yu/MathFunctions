@@ -17,9 +17,9 @@ namespace MathFunctions.Tests
         [TestMethod()]
         public void SquareTest()
         {
-            Assert.AreEqual(Math.PI, MathFunctionsClass.areaOfCircle(1));
-            Assert.AreEqual(0, MathFunctionsClass.Square(0));
-            Assert.AreEqual(16, MathFunctionsClass.Square(4));
+            Assert.AreEqual(9 * Math.PI, MathFunctionsClass.areaOfCircle(3));
+            Assert.AreEqual(6 * Math.PI, MathFunctionsClass.circumferenceOfCircle(3));
+            Assert.AreEqual(56.54866776461, MathFunctionsClass.volumeOfHemisphere(3),0.000001);
             /* MathFunctionsClass.Square(1)
                            .ShouldBe(1);
             oMathFunctionsClass.Square(6)
